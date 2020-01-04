@@ -26,7 +26,8 @@ let fs = require('fs');
     //const wsChromeEndpointUrl = 'ws://localhost:9222/devtools/browser/d9f61044-4a22-4ff2-a32f-ea1070f7dcb4';
 
     const browser = await puppeteer.connect({
-        browserWSEndpoint: wsChromeEndpointUrl
+        browserWSEndpoint: wsChromeEndpointUrl,
+        defaultViewport:null                       //set the viewport maxium
     });
 
     const page = await browser.newPage();
